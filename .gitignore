@@ -1,0 +1,114 @@
+# ── Sensitive / environment ──────────────────────────────────────────────────
+# API keys, model overrides, and any local .env variants
+.env
+.env.local
+.env.*.local
+*.env.local
+secrets.json
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ── Build / distribution ─────────────────────────────────────────────────────
+build/
+dist/
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Testing / coverage ───────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.cache/
+nosetests.xml
+.hypothesis/
+
+# ── Application logs (rotating stdlib log + per-session input/output archive)
+# Covers logs/app/, logs/inputs/{text,audio}, logs/outputs/{text,audio}
+logs/
+
+# ── User-generated audio output ──────────────────────────────────────────────
+# Synthesised story / TTS WAV files written by every backend
+assets/*.wav
+assets/*.mp3
+assets/*.flac
+assets/*.ogg
+!assets/.gitkeep
+
+# ── Auto-downloaded TTS model weights ────────────────────────────────────────
+# Piper voices come from HuggingFace on first run; Coqui / BARK pull their own.
+# All are large and reproducible — do not ship them with source.
+models/*.onnx
+models/*.onnx.json
+models/*.pt
+models/*.bin
+models/*.safetensors
+!models/.gitkeep
+
+# Coqui / BARK / huggingface_hub local caches if they end up in the tree
+.cache/
+.huggingface/
+checkpoints/
+
+# ── IDE / editor ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Gradio runtime artifacts ─────────────────────────────────────────────────
+gradio_cached_examples/
+flagged/
+.gradio/
+
+# ── Notebook checkpoints ─────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Local scratch files ──────────────────────────────────────────────────────
+scratch/
+tmp/
+*.tmp
+
+# ── Coding Agent files ──────────────────────────────────────────────────────
+.claude/
+claude/
+.cursor/
+.cursor-cache/
+.cursor-tutor/
+.cursorignore
+
+# Continue.dev
+.continue/
+
+# Copilot / AI temp
+.github/copilot/

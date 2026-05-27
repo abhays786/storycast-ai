@@ -1,0 +1,35 @@
+# Core dependencies (always required)
+ollama>=0.3.0
+gradio>=4.44.0
+piper-tts>=1.2.0
+huggingface_hub>=1.0.0
+SpeechRecognition>=3.10.0
+python-dotenv>=1.0.0
+pydub>=0.25.1
+requests>=2.31.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# ── Gemini TTS ────────────────────────────────────────────────────────────────
+google-genai>=1.0.0
+
+# ── Intel GPU acceleration ────────────────────────────────────────────────────
+# OpenVINO: accelerates Piper (ONNX) on Intel Arc GPU / NPU — Python 3.14 compatible
+openvino>=2026.1.0
+#
+# IPEX (Intel Extension for PyTorch): accelerates BARK + Coqui on Intel Arc
+# Requires Python <= 3.12 and a matching PyTorch XPU build from Intel.
+# See https://intel.github.io/intel-extension-for-pytorch
+# intel-extension-for-pytorch
+
+# ── Optional TTS engines ───────────────────────────────────────────────────────
+# Uncomment the line(s) below and run `pip install -r requirements.txt` again
+# to enable the corresponding engine in the UI.
+#
+# Coqui TTS — natural neural voices (~200 MB model download on first use)
+coqui-tts>=0.22.0
+
+#
+# BARK (Suno) — very expressive but slow on CPU, fast on GPU (~1-2 GB download)
+# suno-bark>=1.0.0
+suno-bark>=0.1.5

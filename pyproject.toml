@@ -1,0 +1,44 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra --strict-markers"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+    "ignore::UserWarning",
+]
+
+[tool.coverage.run]
+branch = false
+source = [
+    "agent",
+    "app",
+    "app_logging",
+    "config",
+    "pipeline",
+    "safety",
+    "session_archive",
+    "settings",
+    "stt",
+    "translation",
+    "tts_engine",
+    "tts",
+    "ui",
+]
+omit = [
+    "tests/*",
+    ".venv/*",
+    "run_tests.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+    "@abstractmethod",
+]
+fail_under = 100
+show_missing = true
+skip_covered = false
